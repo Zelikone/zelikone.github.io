@@ -19,7 +19,18 @@ accordionBtns.forEach((accordion) => {
             content.style.maxHeight = null;
         } else {
             content.style.maxHeight = content.scrollHeight + 20 + "px";
-            console.log(content.style.maxHeight);
         }
     };
+});
+
+const burgerButton = document.querySelector('.header-burger-button');
+const closeMenuButton = document.querySelector('.close-menu-button');
+const mobMenu = document.querySelector('.menu-mob');
+
+burgerButton.addEventListener('click', () => {
+    mobMenu.classList.add('active')
+});
+
+closeMenuButton.addEventListener('click', () => {
+    mobMenu.classList.remove('active')
 });
